@@ -1,0 +1,6 @@
+<% @listings.each do |listing| %>
+  <div class="listing_container">
+    <h2 class="lisitng_city"><%= link_to listing.city, listing %></h2>
+    <p class="listing_description"><%= listing.description %></p>
+  </div>
+<% end %>
