@@ -1,0 +1,28 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/andrewpeterson/Documents/bloorson-holdings/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/andrewpeterson/Documents/bloorson-holdings/app/models/listing.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/andrewpeterson/Documents/bloorson-holdings/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/andrewpeterson/Documents/bloorson-holdings/app/controllers/listings_controller.rb": [
+
+      ]
+    },
+    "timestamp": 1473803594
+  }
+}
