@@ -13,7 +13,12 @@
         <h2>Bloorson Holdings</h2>
       </div>
       <div class='col-md-2'>
-        <%= link_to 'Register', class: 'nav_link' %> // <%= link_to 'Login', class: 'nav_link' %>
+        <% if session[:user_id] %>
+          <%= link_to 'Logout', session_path(session[:user_id]), method: :delete, class: 'nav_link' %>
+        <% else %>
+          <%= link_to 'Register', new_user_path, class: 'nav_link' %> //
+          <%= link_to 'Login', new_session_path, class: 'nav_link' %>
+        <% end %>
       </div>
     </div>
     <div class='row'>
