@@ -1,4 +1,11 @@
 class UsersController < ApplicationController
+  def index
+    @user = User.find(params[:user_id])
+    @listings = @user.listings.order(:created_at).limit(5)
+
+    render :'users/user_id/listings'
+  end
+
   def new
     @user = User.new
   end
@@ -20,7 +27,7 @@ class UsersController < ApplicationController
   private
 
   def get_user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password)
   end
 
 end
