@@ -6,7 +6,9 @@ gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
+gem 'sass', '~> 3.4.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -24,6 +26,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'faker'
+gem 'bootstrap', '~> 4.0.0.alpha4'
+gem 'sprockets-rails', '2.3.3'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
