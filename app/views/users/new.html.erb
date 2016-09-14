@@ -1,0 +1,29 @@
+<h2>Register</h2>
+<hr>
+<%= form_for @user do |f| %>
+<div class='form-field'>
+  <%= f.label "Name:" %>
+  <%= f.text_field :name %>
+  <p class='errors'><%= show_errors(@user, :name) %></p>
+</div>
+
+<div class='form-field'>
+  <%= f.label "Email:" %>
+  <%= f.text_field :email %>
+  <p class='errors'><%= show_errors(@user, :email) %></p>
+</div>
+
+<div class='form-field'>
+  <%= f.label "Password:" %>
+  <%= f.password_field :password %>
+  <p class='errors'><%= show_errors(@user, :password) %></p>
+</div>
+
+<div class='form-field'>
+  <%= f.label "Confirm Password:" %>
+  <%= f.password_field :password_confirmation %>
+  <p class='errors'><%= show_errors(@user, :password_confirmation) %></p>
+</div>
+
+<%= content_tag(:button, "Register") %>
+<% end %>
