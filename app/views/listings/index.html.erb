@@ -2,9 +2,17 @@
 <hr>
 <% @listings.each do |listing| %>
   <div class="listing_container">
-    <ul>
+    <ul id="left">
       <li class="details"><%= link_to listing.address, user_listing_url(user_id: listing.user.id, id: listing.id), class: 'nav_link' %></li>
       <li class="details"><%= "#{listing.city}, #{listing.state}, #{listing.zip}" %></li>
+    </ul>
+    <ul id="right">
+      <li><%= link_to 'Edit Listing', edit_user_listing_path(user_id: listing.user.id, id: listing.id), class: 'nav_link' %></li>
+      <li><%= link_to 'Delete Listing', user_listing_path(user_id: listing.user.id, id: listing.id),
+                                        method: :delete,
+                                        data: { confirm: 'Are you sure you want to delete?' },
+                                        class: 'nav_link' %>
+      </li>
     </ul>
   </div>
 <% end %>
