@@ -1,0 +1,35 @@
+<h3>Add a New Listing</h3>
+<hr>
+<%= form_for @listing, url: {action: "create"} do |f| %>
+  <div class='form-field'>
+    <%= f.label "address:" %>
+    <%= f.text_field :address %>
+    <p class='errors'><%= show_errors(@listing, :address) %></p>
+  </div>
+
+  <div class='form-field'>
+    <%= f.label "City:" %>
+    <%= f.text_field :city %>
+    <p class='errors'><%= show_errors(@listing, :city) %></p>
+  </div>
+
+  <div class='form-field'>
+    <%= f.label "State:" %>
+    <%= f.select :state, options_for_select(state_options), { class: 'dropdown' } %>
+    <p class='errors'><%= show_errors(@listing, :state) %></p>
+  </div>
+
+  <div class='form-field'>
+    <%= f.label "Zip:" %>
+    <%= f.text_field :zip %>
+    <p class='errors'><%= show_errors(@listing, :zip) %></p>
+  </div>
+
+  <div class='form-field'>
+    <%= f.label "Description:" %>
+    <%= f.text_area :description %>
+    <p class='errors'><%= show_errors(@listing, :description) %></p>
+  </div>
+
+  <%= content_tag(:button, "Add Listing") %>
+<% end %>
