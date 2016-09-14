@@ -1,5 +1,4 @@
 class Listing < ActiveRecord::Base
-  has_many :properties, dependent: :destroy
+  belongs_to :user
 
-  validates :city, presence: true
 end
