@@ -21,7 +21,7 @@
         <% end %>
       </div>
     </div>
-    <div class='row'>
+    <div id='main-content-row' class='row'>
       <div id='sidebar' class='col-md-3'>
         <% if session[:user_id] %>
           <%= link_to 'View Listings', user_listings_path(session[:user_id]) %></br>

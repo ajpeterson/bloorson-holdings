@@ -36,20 +36,28 @@ li {
   list-style-type: none;
 }
 
-#sidebar {
-  padding: 15px;
+#main-content-row {
   height: 100%;
-  background-color: #542e4d;
-  color: rgba(200, 200, 200, .8);
-  border-radius: 0px 20px 0px 0px;
-}
 
-#content {
-  padding-left: 50px;
-  padding-right: 75px;
+  #sidebar {
+    padding: 15px;
+    height: 100%;
+    background-color: #542e4d;
+    color: rgba(200, 200, 200, .8);
+    border-radius: 0px 20px 0px 0px;
 
-  a:hover {
-    color: #4a868c;
+    p {
+      padding: 15px;
+    }
+  }
+
+  #content {
+    padding-left: 50px;
+    padding-right: 75px;
+
+    a:hover {
+      color: #4a868c;
+    }
   }
 }
 
