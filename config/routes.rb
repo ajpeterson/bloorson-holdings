@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'listings#index'
+  root 'pages#index'
 
   resources :listings, only: [:index, :show]
 
