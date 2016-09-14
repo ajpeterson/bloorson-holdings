@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-13T14:53:14-07:00">2016-09-13T14:53:14-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-13T19:18:13-07:00">2016-09-13T19:18:13-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">44.44%</span></span>
+    (<span class="covered_percent"><span class="red">20.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.44
+         0.2
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>9</b> relevant lines. 
+    <b>20</b> relevant lines. 
     <span class="green"><b>4</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <span class="red"><b>16</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,11 +62,11 @@
       
       <tr>
         <td class="strong"><a href="#510d466d4c9c36237716bb0171f90252818eadc7" class="src_link" title="app/controllers/listings_controller.rb">app/controllers/listings_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">0.0 %</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
+        <td>11</td>
         <td>0.0</td>
       </tr>
       
@@ -110,9 +110,9 @@
   <a name="Controllers"></a>
   <div>
     <b>2</b> files in total.
-    <b>5</b> relevant lines. 
+    <b>16</b> relevant lines. 
     <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <span class="red"><b>16</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -140,11 +140,11 @@
       
       <tr>
         <td class="strong"><a href="#510d466d4c9c36237716bb0171f90252818eadc7" class="src_link" title="app/controllers/listings_controller.rb">app/controllers/listings_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">0.0 %</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
+        <td>11</td>
         <td>0.0</td>
       </tr>
       
@@ -419,16 +419,82 @@
         <div class="source_table" id="510d466d4c9c36237716bb0171f90252818eadc7">
   <div class="header">
     <h3>app/controllers/listings_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">0.0 %</span> covered</h4>
     <div>
-      <b>0</b> relevant lines. 
+      <b>11</b> relevant lines. 
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="red"><b>11</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
+      
+        <li class="missed" data-hits="0" data-linenumber="1">
+          
+          
+          <code class="ruby">class ListingsController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="2">
+          
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="3">
+          
+          
+          <code class="ruby">    @listings = Listing.order(:created_at).limit(5)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
+          
+          <code class="ruby">    @listing = Listing.find(params[:id])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">    render &#39;show&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">end</code>
+        </li>
       
     </ol>
   </pre>
@@ -487,7 +553,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :properties, dependent: :destroy</code>
+          <code class="ruby">  belongs_to :user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -499,7 +565,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :city, presence: true</code>
+          <code class="ruby">  validates :address, :city, :state, :zip, presence: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">

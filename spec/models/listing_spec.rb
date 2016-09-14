@@ -1,15 +1,38 @@
 require 'rails_helper'
 
 describe 'Listing' do
-  let(:valid_listing) { Listing.create(city: 'Seattle') }
+  let(:valid_listing) do Listing.create(
+    address: '83 S King Street',
+    city: 'Seattle',
+    state: 'WA',
+    zip: '98105',
+    description: 'A new listing')
+  end
+
+  let(:invalid_listing) do Listing.create(
+    address: '',
+    city: 'Seattle',
+    state: 'WA',
+    zip: '98105',
+    description: 'A new listing')
+  end
 
   describe 'validations' do
-
-    let(:invalid_listing) { Listing.create(city: "") }
-
     describe 'when valid' do
       it 'validates the presence of city' do
+        expect(valid_listing.address).to eq('83 S King Street')
+      end
+
+      it 'validates the presence of city' do
         expect(valid_listing.city).to eq('Seattle')
+      end
+
+      it 'validates the presence of city' do
+        expect(valid_listing.state).to eq('WA')
+      end
+
+      it 'validates the presence of city' do
+        expect(valid_listing.zip).to eq('98105')
       end
     end
 

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  resources :listings do
-    resources :properties
-  end
+  resources :listings
 
   root 'listings#index'
 
