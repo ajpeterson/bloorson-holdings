@@ -7,29 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id='main-container' class='container'>
-    <div class='row'>
-      <div class='col-md-10'>
-        <h2>Bloorson Holdings</h2>
+  <div id='main-container'>
+    <div id='header' class='row'>
+      <div class='col-md-9'>
+        <h1><%= link_to 'Bloorson Holdings', root_path %></h1>
       </div>
-      <div class='col-md-2'>
+      <div id='nav' class='col-md-3'>
         <% if session[:user_id] %>
           <%= link_to 'Logout', session_path(session[:user_id]), method: :delete, class: 'nav_link' %>
         <% else %>
-          <%= link_to 'Register', new_user_path, class: 'nav_link' %> //
+          <%= link_to 'Register', new_user_path, class: 'nav_link' %> &nbsp;//&nbsp;
           <%= link_to 'Login', new_session_path, class: 'nav_link' %>
         <% end %>
       </div>
     </div>
     <div class='row'>
-      <div class='col-md-3'>
+      <div id='sidebar' class='col-md-3'>
         <% if session[:user_id] %>
           <%= link_to 'View Listings', user_listings_path(session[:user_id]) %></br>
           <%= link_to 'Add Listing', new_user_listing_path(session[:user_id]) %>
+        <% else %>
+          <p>Bloorson Holdings was started with the idea of empowering our users to be their own real estate agent when it comes to listing their properties. We have been around since 2010 and grown steadily each year. We look forward to helping you achieve your goals.</p>
         <% end %>
       </div>
-      <div class='col-md-9'>
+      <div id='content' class='col-md-9'>
         <%= yield %>
+      </div>
+    </div>
+    <div id='footer' class='row'>
+      <div class='col-md-12'>
+        <p>Copyright © <%= Date.today.year %> Bloorson Holdings &nbsp;//&nbsp; All Rights Reserved</p>
       </div>
     </div>
   </div>
