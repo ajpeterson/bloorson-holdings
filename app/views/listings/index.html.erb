@@ -1,7 +1,9 @@
+<h4 id='welcome'>Welcome, please views some of the current listings.</h4>
+<hr>
 <% @listings.each do |listing| %>
   <div class="listing_container">
     <ul>
-      <li class="lisitng_link details"><%= link_to listing.address, listing %></li>
+      <li class="details"><%= link_to listing.address, listing, class: 'nav_link' %></li>
       <li class="details"><%= "#{listing.city}, #{listing.state}, #{listing.zip}" %></li>
     </ul>
   </div>
