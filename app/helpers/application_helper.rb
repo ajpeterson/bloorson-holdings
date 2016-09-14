@@ -19,4 +19,16 @@ module ApplicationHelper
   def user_logged_in?
     session[:user_id] != nil
   end
+
+  def state_options
+    [
+      ['Alaska', 'AK'],
+      ['California', 'CA'],
+      ['Idaho', 'ID'],
+      ['Montana', 'MT'],
+      ['Oregon', 'OR'],
+      ['Washington', 'WA'],
+      ['Wyoming', 'WY']
+    ]
+  end
 end
