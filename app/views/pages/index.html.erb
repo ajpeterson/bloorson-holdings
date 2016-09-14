@@ -1,10 +1,11 @@
-<h4 id='welcome'>Welcome, please views some of the current listings.</h4>
+<h4 id='welcome'>Welcome, here are some of the current listings.</h4>
 <hr>
 <% @listings.each do |listing| %>
   <div class="listing_container">
     <ul>
-      <li class="details"><%= link_to listing.address, listing, class: 'nav_link' %></li>
+      <li class="details"><%= listing.address %></li>
       <li class="details"><%= "#{listing.city}, #{listing.state}, #{listing.zip}" %></li>
+      <li class="details"><%= listing.description %></li>
     </ul>
   </div>
 <% end %>
