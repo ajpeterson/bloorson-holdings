@@ -1,1 +1,15 @@
-<h2>Welcome, <%= @user.name %></h2>
+<h3>Welcome, <%= @user.name %></h3>
+
+<p>Here are your current listings.</p>
+<% @user.listings.each do |listing| %>
+  <div class="listing_container">
+    <ul>
+      <li class="lisitng_link details"><%= link_to listing.address, listing %></li>
+      <li class="details"><%= "#{listing.city}, #{listing.state}, #{listing.zip}" %></li>
+    </ul>
+    <ul>
+      <li class="lisitng_link details"><%= link_to 'Edit', edit_user_listing_path %></li>
+      <li class="lisitng_link details"><%= button_to 'Delete', user_listing_path, method: :delete %></li>
+    </ul>
+  </div>
+<% end %>

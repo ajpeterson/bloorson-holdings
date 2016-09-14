@@ -19,11 +19,5 @@
   <p class='errors'><%= show_errors(@user, :password) %></p>
 </div>
 
-<div class='form-field'>
-  <%= f.label "Confirm Password:" %>
-  <%= f.password_field :password_confirmation %>
-  <p class='errors'><%= show_errors(@user, :password_confirmation) %></p>
-</div>
-
 <%= content_tag(:button, "Register") %>
 <% end %>
