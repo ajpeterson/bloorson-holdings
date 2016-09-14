@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bloorson Holdings
 
-Things you may want to cover:
+A simple app that allows users to register and login to post new listings they have available.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The app was built primarily in Ruby on Rails with HTML and CSS. The CSS was done using Bootstrap and SASS, using the scss notation. There is also a little bit of JavaScript with AJAX and jQuery.
