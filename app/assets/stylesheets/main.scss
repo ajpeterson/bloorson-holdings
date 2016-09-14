@@ -47,6 +47,23 @@ li {
     color: rgba(200, 200, 200, .8);
     border-radius: 0px 20px 0px 0px;
 
+    a {
+      padding-left: 25px;
+    }
+
+    a:link {
+      text-decoration: none;
+      color: rgba(200, 200, 200, .8);;
+    }
+
+    a:visited {
+      color: rgba(200, 200, 200, .8);;
+    }
+
+    a:hover {
+      color: #4a868c;
+    }
+
     p {
       padding: 15px;
     }
