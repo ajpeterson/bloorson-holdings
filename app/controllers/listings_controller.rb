@@ -6,16 +6,26 @@ class ListingsController < ApplicationController
 
   def new
     @listing = Listing.new
+
+    if request.xhr?
+      render :'listings/new', :layout => false
+    end
   end
 
   def create
     @user = User.find(params[:user_id])
     @listing = @user.listings.new(listing_params)
 
-    if @listing.save
-      redirect_to user_listing_url(user_id: @listing.user.id, id: @listing.id)
+    if request.xhr?
+      if @listing.save
+        redirect_to user_listing_url(user_id: @listing.user.id, id: @listing.id)
+      end
     else
-      render 'new'
+      if @listing.save
+        redirect_to user_listing_url(user_id: @listing.user.id, id: @listing.id)
+      else
+        render 'new'
+      end
     end
   end
 
