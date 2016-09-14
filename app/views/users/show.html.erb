@@ -1,15 +1,3 @@
-<h3>Welcome, <%= @user.name %></h3>
+<h3>Welcome back, <%= @user.name %></h3>
 
-<p>Here are your current listings.</p>
-<% @user.listings.each do |listing| %>
-  <div class="listing_container">
-    <ul>
-      <li class="lisitng_link details"><%= link_to listing.address, listing %></li>
-      <li class="details"><%= "#{listing.city}, #{listing.state}, #{listing.zip}" %></li>
-    </ul>
-    <ul>
-      <li class="lisitng_link details"><%= link_to 'Edit', edit_user_listing_path %></li>
-      <li class="lisitng_link details"><%= button_to 'Delete', user_listing_path, method: :delete %></li>
-    </ul>
-  </div>
-<% end %>
+<p>Please utilize this dashboard to manage the listings you have with us. From this page you can view all your listings, add new listings, delete any old listings and make changes to any of your current listings.</p>
