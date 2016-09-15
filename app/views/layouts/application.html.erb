@@ -24,7 +24,7 @@
     <div id='main-content-row' class='row'>
       <div id='sidebar' class='col-md-3'>
         <% if session[:user_id] %>
-          <%= link_to 'View Listings', user_listings_path(session[:user_id]) %></br>
+          <%= link_to 'View Listings', user_listings_path(session[:user_id]), id: 'view_listing' %></br>
           <%= link_to 'Add Listing', new_user_listing_path(session[:user_id]), id: 'add_listing' %>
         <% else %>
           <p>Bloorson Holdings was started with the idea of empowering our users to be their own real estate agent when it comes to listing their properties. We have been around since 2010 and grown steadily each year. We look forward to helping you achieve your goals.</p>

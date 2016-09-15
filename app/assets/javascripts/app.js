@@ -25,15 +25,15 @@ $(document).ready(function() {
     e.preventDefault();
 
     var $url;
-    $url = $('#add_listing').attr('action')
+    $url = $('#view_listing').attr('href')
     $.ajax({
       type: 'POST',
       url: $url,
       data: $form.serialize(),
       success: function(partial){
-        var $layoutContainer;
-        $layoutContainer = $('#content')
-        $layoutContainer.html(partial);
+        var $content;
+        $content = $('#content')
+        $content.html(partial);
         $form.find('input').val('')
       }
     });
